@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head> 
+
+<script>
+	function func(cb){
+	   console.log(this, arguments.length);
+	   cb();
+	}
+	
+	function callBackFunc() {
+	   console.log("Inside callBackFunc");		
+	}
+	
+	$(document).ready(function(f) {	    
+	    $("#f1").click(function(){		    
+	    	func(callBackFunc);
+	    });
+	});	     	
+</script>
+
+<body>
+	<button id="f1">Call f1 and provide callback function cb</button>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head> 
+
+<script>
+	function func(x){
+	   console.log(this, arguments.length);
+	}
+	
+	$(document).ready(function() {	    
+	    $("#call").click(function(){		    
+	    	func.call("foobar", [1, 2]);
+	    });
+	    
+	    $("#apply").click(function(){
+			func.apply("foobar",  [1, 2]);
+		});	
+	});	     	
+</script>
+
+<body>
+	<button id="call">use call</button>
+	<button id="apply">use apply</button>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head> 
+
+<script>
+	function func(x){
+	   console.log(typeof x, arguments.length);
+	}
+	
+	$(document).ready(function() {
+	    $("#none").click(function(){
+	        func();
+	    });
+	    
+	    $("#number").click(function(){		    
+	    	func(2);
+	    });
+	    
+	    $("#string").click(function(){
+			func("1", "2", "3");
+		});	
+	});	     	
+</script>
+
+<body>
+	<button id="none">func(empty)</button>
+	<button id="number">func(number)</button>
+	<button id="string">func(string)</button>
+</body>
+
+</html>

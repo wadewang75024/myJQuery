@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head> 
+
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).css({"color":"red"});
+    });
+    $(".pclass").click(function(){
+        $(this).css({"color":"blue"});
+    });
+    
+    $("#pid").click(function(){
+        $(this).css({"color":"green"});
+    });
+    
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    
+    $("#show").click(function(){
+        $("p").show();
+    });
+    
+});
+
+</script>
+
+<body>
+    <p> A paragraph without id or class. Click me! </p>
+    <p class = "pclass"> A paragraph with class.  Click me! </p>
+    <p id ="pid"> A paragraph with id. Click me! </p>
+    
+    <button id="show">Click me to show paragraphs</button>
+    <button id="hide">Click me to hide paragraphs</button>
+</body>
+
+</html>
